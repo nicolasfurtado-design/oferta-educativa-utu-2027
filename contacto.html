@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto e Inscripciones 2027 | Escuela Técnica de Minas - UTU</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Encabezado y Navegación -->
+    <header>
+        <div class="contenedor header-flex">
+            <a href="index.html" class="logo-link">
+                <h1>UTU <span>Oferta 2027</span></h1>
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="menu-padre">
+                        <details>
+                            <summary>Cursos ▾</summary>
+                            <div class="submenu megamenu">
+                                <div class="submenu-col">
+                                    <h4>EBI, FPB y Rumbo</h4>
+                                    <a href="ebi-grados.html">7.º, 8.º y 9.º EBI</a>
+                                    <a href="fpb-mecanica-general.html">FPB Mecánica General</a>
+                                    <a href="fpb-audiovisual.html">FPB Audiovisual</a>
+                                    <a href="plan-rumbo.html">Plan Rumbo</a>
+                                </div>
+                                <div class="submenu-col">
+                                    <h4>Bachillerato Tecnológico (BT)</h4>
+                                    <a href="bt-salud.html">BT Promoción en Salud</a>
+                                    <a href="bt-musica.html">BT Producción Musical</a>
+                                    <a href="bt-deporte.html">BT Deporte y Recreación</a>
+                                    <a href="bt-administracion.html">BT Gestión y Administración</a>
+                                    <a href="bt-turismo.html">BT Turismo y Hospitalidad</a>
+                                    <a href="bt-laboratorio.html">BT Laboratorio y Ciencias</a>
+                                </div>
+                                <div class="submenu-col">
+                                    <h4>Bachillerato Técnico Profesional (BTP)</h4>
+                                    <a href="btp-soporte-informatico.html">BTP Soporte Informático</a>
+                                    <a href="btp-mecanica-soldadura.html">BTP Mecánica y Soldadura</a>
+                                    <a href="btp-automotores.html">BTP Automotores</a>
+                                    <a href="btp-gastronomia.html">BTP Gastronomía</a>
+                                    <a href="btp-instalaciones-electricas.html">BTP Instalaciones Eléctricas</a>
+                                    <a href="btp-estetica-personal.html">BTP Estética Personal</a>
+                                </div>
+                                <div class="submenu-col">
+                                    <h4>Educación Terciaria</h4>
+                                    <a href="terciario-ctt-gastronomia.html">CTT Gastronomía</a>
+                                    <a href="terciario-tecnologo-administracion.html">Tecnólogo Administración (UTU-Udelar)</a>
+                                    <a href="terciario-fit-monitor-deportivo.html">FIT Monitor Deportivo</a>
+                                </div>
+                            </div>
+                        </details>
+                    </li>
+                    <li><a href="contacto.html" class="activo">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Migas de pan -->
+    <div class="migas-pan">
+        <div class="contenedor">
+            <a href="index.html">&larr; Volver a Inicio</a> / <span>Contacto</span>
+        </div>
+    </div>
+
+    <!-- Banner de Contacto -->
+    <section class="banner-curso">
+        <div class="contenedor">
+            <span class="etiqueta-nivel">Atención e Inscripciones 2027</span>
+            <h2>Contacto y Consultas</h2>
+            <p>Escuela Técnica de Minas • DGETP - UTU / ANEP • Lavalleja</p>
+        </div>
+    </section>
+
+    <!-- Contenido Principal de Contacto -->
+    <main class="contenedor pagina-contacto">
+        
+        <!-- Formulario de Consulta / Preinscripción -->
+        <section class="formulario-contacto">
+            <h3>Envíanos tu consulta</h3>
+            <p>Completa el formulario para recibir información sobre requisitos, períodos de inscripción y horarios de los cursos.</p>
+
+            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('¡Gracias por tu mensaje! La Escuela Técnica de Minas se pondrá en contacto a la brevedad.');">
+                
+                <div class="campo">
+                    <label for="nombre">Nombre y Apellido *</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                </div>
+
+                <div class="campo-doble">
+                    <div class="campo">
+                        <label for="ci">Cédula de Identidad *</label>
+                        <input type="text" id="ci" name="ci" placeholder="Ej: 1.234.567-8" required>
+                    </div>
+                    <div class="campo">
+                        <label for="telefono">Teléfono / WhatsApp *</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej: 099 123 456" required>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="curso">Curso o Carrera de Interés *</label>
+                    <select id="curso" name="curso" required>
+                        <option value="" disabled selected>Selecciona una opción...</option>
+                        
+                        <optgroup label="Educación Básica Integrada (EBI)">
+                            <option value="ebi-grados">7.º, 8.º y 9.º Grado de EBI</option>
+                        </optgroup>
+
+                        <optgroup label="Formación Profesional Básica (FPB)">
+                            <option value="fpb-mecanica">Segundo Año de FPB – Mecánica General</option>
+                            <option value="fpb-audiovisual">FPB – Audiovisual</option>
+                        </optgroup>
+
+                        <optgroup label="Plan Rumbo">
+                            <option value="plan-rumbo">Plan Rumbo (Adultos 18+)</option>
+                        </optgroup>
+
+                        <optgroup label="Bachillerato Tecnológico (BT - Plan 2023)">
+                            <option value="bt-salud">BT – Asistencia Comunitaria y Promoción en Salud</option>
+                            <option value="bt-musica">BT – Composición y Producción Musical</option>
+                            <option value="bt-deporte">BT – Deporte, Educación Física y Recreación</option>
+                            <option value="bt-administracion">BT – Gestión y Administración</option>
+                            <option value="bt-turismo">BT – Turismo, Hospitalidad y Ocio</option>
+                            <option value="bt-laboratorio">BT – Ciencias y Tecnologías de Laboratorio</option>
+                        </optgroup>
+
+                        <optgroup label="Bachillerato Técnico Profesional (BTP - Plan 2022)">
+                            <option value="btp-soporte">BTP – Soporte Técnico Informático</option>
+                            <option value="btp-mecanica">BTP – Mecánica Industrial y Soldadura</option>
+                            <option value="btp-automotores">BTP – Automotores</option>
+                            <option value="btp-gastronomia">BTP – Gastronomía</option>
+                            <option value="btp-instalaciones">BTP – Instalaciones Eléctricas</option>
+                            <option value="btp-estetica">BTP – Estética Personal</option>
+                        </optgroup>
+
+                        <optgroup label="Educación Superior Terciaria">
+                            <option value="terciario-ctt-gastronomia">Curso Técnico Terciario (CTT) en Gastronomía</option>
+                            <option value="terciario-tecnologo-administracion">Tecnólogo en Administración y Contabilidad (UTU / Udelar)</option>
+                            <option value="terciario-fit-deportivo">FIT en Monitor Deportivo</option>
+                        </optgroup>
+
+                        <optgroup label="Otras Consultas">
+                            <option value="consulta-general">Consulta General / Trámites</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="turno">Turno de Preferencia</label>
+                    <select id="turno" name="turno">
+                        <option value="indiferente">Indiferente / A consultar</option>
+                        <option value="matutino">Matutino</option>
+                        <option value="vespertino">Vespertino</option>
+                        <option value="nocturno">Nocturno</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Consulta o Comentario</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu consulta aquí (horarios, equivalencias, documentación, etc.)..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-bloque">Enviar Consulta</button>
+            </form>
+        </section>
+
+        <!-- Información Institucional y Mapa -->
+        <aside class="bloque-info-contacto">
+            
+            <div class="tarjeta-contacto">
+                <h3>Información Oficial del Centro</h3>
+                
+                <div class="item-contacto">
+                    <div class="icono-contacto">🏛</div>
+                    <div class="item-contacto-texto">
+                        <strong>Centro Educativo</strong>
+                        <p>Escuela Técnica de Minas<br><small>DGETP - UTU / ANEP</small></p>
+                    </div>
+                </div>
+
+                <div class="item-contacto">
+                    <div class="icono-contacto">📍</div>
+                    <div class="item-contacto-texto">
+                        <strong>Departamento / Localidad</strong>
+                        <p>Lavalleja – Minas, Uruguay</p>
+                    </div>
+                </div>
+
+                <div class="item-contacto">
+                    <div class="icono-contacto">📫</div>
+                    <div class="item-contacto-texto">
+                        <strong>Dirección</strong>
+                        <p>Av. José Pedro Varela N.º 850 esq. Joaquín Suárez</p>
+                    </div>
+                </div>
+
+                <div class="item-contacto">
+                    <div class="icono-contacto">📞</div>
+                    <div class="item-contacto-texto">
+                        <strong>Teléfonos de Contacto</strong>
+                        <div class="telefonos-grid">
+                            <a href="tel:44422255" class="tel-pill">4442 2255</a>
+                            <a href="tel:44429455" class="tel-pill">4442 9455</a>
+                            <a href="tel:44429492" class="tel-pill">4442 9492</a>
+                            <a href="tel:44438370" class="tel-pill">4443 8370</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-contacto">
+                    <div class="icono-contacto">✉️</div>
+                    <div class="item-contacto-texto">
+                        <strong>Correo Electrónico Institucional</strong>
+                        <p><a href="mailto:escuelatecnicaminas@gmail.com">escuelatecnicaminas@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="item-contacto">
+                    <div class="icono-contacto">📸</div>
+                    <div class="item-contacto-texto">
+                        <strong>Redes Sociales Oficiales</strong>
+                        <p><a href="https://www.instagram.com/tecnicaminas.oficial/" target="_blank" rel="noopener">@tecnicaminas.oficial (Instagram)</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mapa de Ubicación -->
+            <div class="tarjeta-contacto">
+                <h3>Ubicación en el Mapa</h3>
+                <p>Av. José Pedro Varela 850, Minas</p>
+                <div class="mapa-contenedor">
+                    <iframe 
+                        src="https://www.google.com/maps?q=Av.+Jos%C3%A9+Pedro+Varela+850,+Minas,+Lavalleja,+Uruguay&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa de ubicación de la Escuela Técnica de Minas">
+                    </iframe>
+                </div>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <div class="contenedor footer-flex">
+            <div>
+                <h3>UTU - Escuela Técnica Minas</h3>
+                <p>Oferta Educativa 2027 • DGETP - ANEP</p>
+            </div>
+            <div>
+                <p>&copy; 2027 UTU DGETP - Página creada por 2° BT Tecnologías de la Información</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

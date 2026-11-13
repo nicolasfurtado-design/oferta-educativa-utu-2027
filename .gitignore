@@ -1,0 +1,11 @@
+# Dependencias y Node
+node_modules/
+package-lock.json
+
+# Entorno y Sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# Scripts de pruebas temporales
+Untitled-1.py
