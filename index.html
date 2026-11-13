@@ -522,5 +522,61 @@
         </div>
     </footer>
 
+    <!-- Modal Pop-up: Aviso de Sitio en Construcción -->
+    <div id="modal-aviso" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        <div class="modal-caja">
+            <button type="button" class="modal-cerrar" id="btn-cerrar-modal" aria-label="Cerrar aviso">&times;</button>
+            <div class="modal-icono">⚠️</div>
+            <span class="etiqueta-nivel">Aviso Importante</span>
+            <h3 id="modal-titulo">Sitio Web en Construcción Permanente</h3>
+            <p>Ten en cuenta que esta web se encuentra en <strong>construcción permanente</strong> y su contenido puede contener errores u omisiones.</p>
+            <p class="modal-subtexto">Ante cualquier duda o consulta, por favor utiliza los <strong>medios de contacto oficiales</strong> de la Escuela Técnica de Minas para verificar la información.</p>
+            <div class="modal-botones">
+                <button type="button" class="btn" id="btn-entendido">Entendido, continuar</button>
+                <a href="contacto.html" class="btn-contacto-modal">Medios de contacto oficiales &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Manejo del Pop-up de Aviso
+        (function() {
+            const modal = document.getElementById('modal-aviso');
+            const btnCerrar = document.getElementById('btn-cerrar-modal');
+            const btnEntendido = document.getElementById('btn-entendido');
+
+            function cerrarModal() {
+                modal.classList.add('modal-oculto');
+                try {
+                    sessionStorage.setItem('aviso_construccion_visto', 'true');
+                } catch(e) {}
+            }
+
+            // Ocultar si ya fue cerrado en la misma sesión de navegación
+            try {
+                if (sessionStorage.getItem('aviso_construccion_visto') === 'true') {
+                    modal.classList.add('modal-oculto');
+                }
+            } catch(e) {}
+
+            btnCerrar.addEventListener('click', cerrarModal);
+            btnEntendido.addEventListener('click', cerrarModal);
+
+            // Cerrar al hacer clic en el fondo
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    cerrarModal();
+                }
+            });
+
+            // Cerrar con tecla Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !modal.classList.contains('modal-oculto')) {
+                    cerrarModal();
+                }
+            });
+        })();
+    </script>
+
 </body>
 </html>

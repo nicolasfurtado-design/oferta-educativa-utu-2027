@@ -878,3 +878,145 @@ footer h3 {
     }
 }
 
+/* 9. MODAL POP-UP AVISO EN CONSTRUCCIÓN */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 20, 45, 0.65);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 1.2rem;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.modal-oculto {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal-caja {
+    background: #FFF;
+    border-radius: 12px;
+    padding: 2.2rem 2rem;
+    max-width: 520px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+    border-top: 5px solid var(--amarillo-utu);
+    animation: modalAnimEntrada 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalAnimEntrada {
+    from {
+        transform: translateY(20px) scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #888;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    transition: color 0.2s, background 0.2s;
+}
+
+.modal-cerrar:hover {
+    color: #111;
+    background-color: #F1F5F9;
+}
+
+.modal-icono {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.modal-caja .etiqueta-nivel {
+    background-color: #FEF3C7;
+    color: #92400E;
+    margin-bottom: 0.6rem;
+}
+
+.modal-caja h3 {
+    color: var(--azul-utu);
+    font-size: 1.45rem;
+    margin-bottom: 0.8rem;
+}
+
+.modal-caja p {
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.6rem;
+}
+
+.modal-subtexto {
+    color: var(--texto-suave);
+    font-size: 0.88rem !important;
+    margin-bottom: 1.6rem !important;
+}
+
+.modal-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.btn-contacto-modal {
+    display: inline-block;
+    background-color: #EFF6FF;
+    color: var(--azul-utu);
+    padding: 0.65rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: 1px solid #BFDBFE;
+    transition: all 0.2s;
+}
+
+.btn-contacto-modal:hover {
+    background-color: var(--azul-utu);
+    color: #FFF !important;
+    border-color: var(--azul-utu);
+}
+
+@media (max-width: 500px) {
+    .modal-caja {
+        padding: 1.8rem 1.2rem;
+    }
+    .modal-botones {
+        flex-direction: column;
+        width: 100%;
+    }
+    .modal-botones .btn,
+    .modal-botones .btn-contacto-modal {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
